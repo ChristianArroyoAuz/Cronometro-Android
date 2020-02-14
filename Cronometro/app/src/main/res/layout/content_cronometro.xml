@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CronometroActivity"
+    tools:showIn="@layout/activity_cronometro">
+
+    <TextView
+        android:id="@+id/etiquetaCronometro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="CRONOMETRO."
+        android:textSize="26sp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/botonEmpezar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/botonPausar"
+        android:layout_alignLeft="@+id/botonPausar"
+        android:layout_alignEnd="@+id/botonPausar"
+        android:layout_alignRight="@+id/botonPausar"
+        android:layout_centerVertical="true"
+        android:onClick="onClickIniciar"
+        android:text="EMPEZAR."
+        android:textSize="30sp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/botonPausar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/botonEmpezar"
+        android:layout_alignStart="@+id/botonReiniciar"
+        android:layout_alignLeft="@+id/botonReiniciar"
+        android:layout_alignEnd="@+id/botonReiniciar"
+        android:layout_alignRight="@+id/botonReiniciar"
+        android:layout_marginTop="23dp"
+        android:onClick="onClickPausar"
+        android:text="PAUSAR."
+        android:textSize="30sp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/botonReiniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/botonPausar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:onClick="onClickReiniciar"
+        android:text="REINICIAR."
+        android:textSize="30sp"
+        tools:ignore="HardcodedText" />
+
+    <Chronometer
+        android:id="@+id/etiquetaContador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/botonEmpezar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="81dp"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/etiquetaReloj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/botonEmpezar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp"
+        android:text="00"
+        android:textSize="26sp"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
